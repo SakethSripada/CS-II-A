@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Noted</title>
+    </head>
+
+    <body>
+        <div>
+        <h1>Welcome to Noted!</h1>
+        <h3>Insert items on your to-do list.</h3>
+        </div>
+
+         <div>
+            <ul>
+                {% for item in todo %}
+                    <li>
+                        {{ item.content }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div>
+            <form action="." method="POST">
+                <textarea name="contents" placeholder="Enter item"></textarea>
+<input type="submit" value="Post item" style="background-color:lightblue; color:white; padding:5px 5px; display:flex; ">
+            </form>
+        </div>
+
+    </body>
+</html>
